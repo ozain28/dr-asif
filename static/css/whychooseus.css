@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f7fafd;
+  color: #1b3c74;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #003b72;
+  padding: 15px 30px;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+.back-home {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Section Styling */
+.why-choose {
+  padding: 60px 20px;
+  text-align: center;
+}
+.why-choose h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  animation: fadeIn 1s ease;
+}
+.why-choose h1 span {
+  color: #007bff;
+}
+.why-choose p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 40px;
+}
+
+/* Feature Cards */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.feature-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  width: 250px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.7s ease;
+}
+.feature-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.feature-card i {
+  font-size: 40px;
+  color: #00bcd4;
+  margin-bottom: 15px;
+}
+.feature-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #1b3c74;
+}
+.feature-card p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Footer */
+footer {
+  background-color: #003b72;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+  .feature-card {
+    width: 90%;
+  }
+}

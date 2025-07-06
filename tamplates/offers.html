@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Special Offers | Dentix</title>
+  <link rel="stylesheet" href="C:\Users\ozain\Desktop\DR. asif\static\css\offers.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- 🔷 Navbar -->
+  <nav class="navbar">
+    <div class="logo">Dentix</div>
+    <ul class="nav-links">
+  <li><a href="C:\Users\ozain\Desktop\DR. asif\tamplates\home.html">BACK TO HOME </a></li>
+    
+    </ul>
+  </nav>
+
+  <!-- 🔶 Offers Section -->
+  <section class="offers-section">
+    <h2 class="offers-heading">🎉 Get Special Offers Today 🎉</h2>
+    <div class="offers-container">
+
+      <!-- ✅ Offer Card 1 -->
+      <div class="offer-card">
+        <h3>Scaling & Cleaning</h3>
+        <p>Professional dental cleaning for all ages.</p>
+        <div class="discount">25% OFF</div>
+        <div class="buttons">
+          <a href="#">At Home</a>
+          <a href="#">In Clinic</a>
+          <button class="details-btn" data-target="desc1">Details</button>
+        </div>
+        <div class="details-box" id="desc1">
+          Includes full mouth scaling, polishing, and plaque removal. Available at your home or clinic.
+        </div>
+      </div>
+
+      <!-- ✅ Offer Card 2 -->
+      <div class="offer-card">
+        <h3>Teeth Whitening</h3>
+        <p>Brighten your smile today.</p>
+        <div class="discount">30% OFF</div>
+        <div class="buttons">
+          <a href="#">At Home</a>
+          <a href="#">In Clinic</a>
+          <button class="details-btn" data-target="desc2">Details</button>
+        </div>
+        <div class="details-box" id="desc2">
+          Advanced teeth whitening treatment with instant results. Safe and long-lasting.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 🔷 Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Dentix. Powered by Dr. Asif Dental Clinic.</p>
+  </footer>
+
+
+<script>
+  const buttons = document.querySelectorAll('.details-btn');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const card = btn.closest('.offer-card');
+      const detailBox = card.querySelector('.details-box');
+
+      // Close all other open boxes
+      document.querySelectorAll('.details-box').forEach(box => {
+        if (box !== detailBox) box.style.display = 'none';
+      });
+
+      // Toggle the selected one
+      if (detailBox.style.display === 'block') {
+        detailBox.style.display = 'none';
+      } else {
+        detailBox.style.display = 'block';
+
+
+        
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
+
+

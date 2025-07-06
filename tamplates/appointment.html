@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Appointment Form</title>
+  <link rel="stylesheet" href="C:\Users\ozain\Desktop\DR. asif\static\css\appoiment.css">
+</head>
+<body>
+ <nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">DENTIX</div>
+    <div class="menu-toggle" id="toggleBtn">&#9776;</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="C:\Users\ozain\Desktop\DR. asif\tamplates\home.html">Home</a></li>
+      <li><a href="C:\Users\ozain\Desktop\DR. asif\tamplates\service.html">Services</a></li>
+      <li><a href="C:\Users\ozain\Desktop\DR. asif\tamplates\about.html">About</a></li>
+      <li><a href="#">Appointment</a></li>
+      <li><a href="C:\Users\ozain\Desktop\DR. asif\tamplates\contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+  <h2>Book Appointment</h2>
+
+  <form id="appointmentForm">
+    <input type="text" id="firstName" placeholder="First Name" required>
+    <input type="text" id="lastName" placeholder="Last Name" required>
+    <input type="text" id="job" placeholder="Job or Business" required>
+    <input type="tel" id="mobile" placeholder="Mobile / WhatsApp" required>
+    <textarea id="medical" rows="3" placeholder="Medical History (Diabetic, BP etc.)"></textarea>
+    <button type="submit">Book Appointment via WhatsApp</button>
+  </form>
+
+  <script>
+    document.getElementById("appointmentForm").addEventListener("submit", function(e) {
+      e.preventDefault(); // Prevent form from submitting normally
+
+      const firstName = document.getElementById("firstName").value;
+      const lastName = document.getElementById("lastName").value;
+      const job = document.getElementById("job").value;
+      const mobile = document.getElementById("mobile").value;
+      const medical = document.getElementById("medical").value;
+
+      const message = `*Appointment Request*\n\n👤 Name: ${firstName} ${lastName}\n💼 Job: ${job}\n📱 Mobile: ${mobile}\n🩺 Medical History: ${medical}`;
+
+      const encodedMessage = encodeURIComponent(message);
+      const phoneNumber = "923001234567"; // <- Replace with your WhatsApp number (92 = Pakistan code)
+
+      const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+      window.open(whatsappURL, "_blank");
+    });
+    
+  document.getElementById("toggleBtn").addEventListener("click", function () {
+    document.getElementById("navLinks").classList.toggle("show");
+  });
+
+
+  </script>
+
+</body>
+</html>
+
+
+

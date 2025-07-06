@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Child Dentist - Dr. Asif</title>
+  <link rel="stylesheet" href="C:\Users\ozain\Desktop\DR. asif\static\css\child.dentist.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- 🔷 Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">Dentix</div>
+      <a href="C:\Users\ozain\Desktop\DR. asif\tamplates\home.html" class="back-home">← Back to Home</a>
+    </div>
+  </nav>
+
+  <!-- 🧒 Child Dentist Section -->
+  <section class="child-section">
+    <h1 data-animate>Child Dentistry</h1>
+    <p data-animate>We make dental visits fun, friendly & stress-free for your little ones.</p>
+    <div class="child-img" data-animate>
+      <img src="C:\Users\ozain\Desktop\DR. asif\static\images\shazaib.jpg" alt="Smiling Kid" />
+    </div>
+
+    <div class="child-features">
+      <div class="card" data-animate>
+        <i class="fas fa-heartbeat"></i>
+        <h3>Gentle Care</h3>
+        <p>Pain-free techniques & calming environment for kids of all ages.</p>
+      </div>
+      <div class="card" data-animate>
+        <i class="fas fa-smile"></i>
+        <h3>Fun Environment</h3>
+        <p>Our clinic is designed with children in mind — cheerful & safe.</p>
+      </div>
+      <div class="card" data-animate>
+        <i class="fas fa-tooth"></i>
+        <h3>Expert Pediatric Dentist</h3>
+        <p>Specialized in treating toddlers, kids & teens with care.</p>
+      </div>
+    </div>
+
+    <a href="#" class="btn-book" data-animate>📅 Book Child Dentist</a>
+  </section>
+
+  <!-- 🟢 Sticky WhatsApp -->
+  <a href="https://wa.me/923123456789" class="whatsapp-sticky" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- 🔹 Footer -->
+  <footer>
+    <p>&copy; 2025 Dentix | Dr. Asif Dental Clinic</p>
+  </footer>
+
+  <!-- 🔸 Scroll Animation Script -->
+  <script>
+    const animatedElements = document.querySelectorAll('[data-animate]');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    animatedElements.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

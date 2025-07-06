@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dental Emergency - Dr. Asif</title>
+  <link rel="stylesheet" href="C:\Users\ozain\Desktop\DR. asif\static\css\dental.emergency.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- 🔹 Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">Dentix</div>
+      <a href="C:\Users\ozain\Desktop\DR. asif\tamplates\home.html" class="back-home">← Back to Home</a>
+    </div>
+  </nav>
+
+  <!-- 🔴 Emergency Section -->
+  <section class="emergency-section">
+    <h1 data-animate>Dental Emergency?</h1>
+    <p data-animate>If you’re experiencing pain, bleeding, or trauma — don’t wait. <br />We're here for urgent dental care 24/7.</p>
+    <a href="https://wa.me/923112286384" class="emergency-call" data-animate><i class="fab fa-whatsapp"></i> Chat on WhatsApp Now</a>
+
+    <div class="emergency-cards">
+      <div class="card" data-animate>
+        <i class="fas fa-tooth"></i>
+        <h3>Severe Toothache</h3>
+        <p>Sudden or unbearable pain may need root canal or immediate treatment.</p>
+      </div>
+      <div class="card" data-animate>
+        <i class="fas fa-crutch"></i>
+        <h3>Broken / Knocked Tooth</h3>
+        <p>Accidental damage? We help save your natural tooth if treated early.</p>
+      </div>
+      <div class="card" data-animate>
+        <i class="fas fa-tint"></i>
+        <h3>Bleeding Gums</h3>
+        <p>Persistent bleeding needs immediate care to avoid serious issues.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🟢 Sticky WhatsApp -->
+  <a href="https://wa.me/923123456789" class="whatsapp-sticky" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- 🔹 Footer -->
+  <footer>
+    <p>&copy; 2025 Dentix | Dr. Asif Dental Clinic</p>
+  </footer>
+
+  <!-- 🔸 Scroll Animation Script -->
+  <script>
+    const animatedElements = document.querySelectorAll('[data-animate]');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    animatedElements.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

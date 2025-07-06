@@ -1,0 +1,293 @@
+/* ✅ Reset + Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f4f9ff;
+  color: #1a1a1a;
+}
+
+/* ✅ Navbar */
+.treatment-navbar {
+  background-color: #003b72;
+  padding: 20px 50px;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* ✅ Page Heading */
+.treatment-header {
+  text-align: center;
+  padding: 20px 30px 30px;
+  background-color: #e6f1ff;
+}
+
+.treatment-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #003b72;
+}
+
+.treatment-header p {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* ✅ Treatment Cards */
+.treatment-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.treatment-card {
+  background: #fff;
+  width: 300px;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.treatment-card:hover {
+  transform: translateY(-10px);
+}
+
+.treatment-card h3 {
+  font-size: 1.4rem;
+  color: #003b72;
+  margin-bottom: 10px;
+}
+
+.treatment-card p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* ✅ Offer Badge */
+.offer-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #ff4081;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+
+/* ✅ FAQ Toggle */
+.faq-toggle {
+  background-color: #003b72;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.faq-toggle:hover {
+  background-color: #00509e;
+}
+
+.faq-content {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #444;
+  display: none;
+  transition: 0.3s ease;
+}
+
+.faq-content.show {
+  display: block;
+}
+
+/* ✅ Scroll Reveal Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.6s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+  .treatment-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .treatment-header h1 {
+    font-size: 2rem;
+  }
+}
+/* ✅ VIP FORM SECTION */
+.vip-form-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 50px 30px;
+  background: linear-gradient(to right, #eaf6ff, #ffffff);
+  border-radius: 20px;
+  flex-wrap: wrap;
+  animation: fadeInUp 1s ease;
+}
+
+.form-left {
+  flex: 1 1 45%;
+}
+
+.form-left h2 {
+  font-size: 2.5rem;
+  color: #003b72;
+  margin-bottom: 15px;
+}
+
+.form-left p {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.form-right {
+  flex: 1 1 45%;
+}
+
+.form-right form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-right label {
+  font-weight: bold;
+  color: #003b72;
+}
+
+.form-right input,
+.form-right select,
+.form-right textarea {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.form-right button {
+  background-color: #003b72;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-right button:hover {
+  background-color: #00509e;
+}
+
+/* ✅ Animation */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ✅ Footer */
+.main-footer {
+  background-color: #003b72;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 60px;
+}
+
+.main-footer h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.main-footer p {
+  font-size: 0.95rem;
+  margin: 5px 0;
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+  .vip-form-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .form-left, .form-right {
+    flex: 1 1 100%;
+  }
+
+  .form-right button {
+    width: 100%;
+  }
+}
+
+
+/* ✅ Animation */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ✅ Responsive Fix */
+@media (max-width: 768px) {
+  .landscape-form {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .form-left, .form-right {
+    flex: 1 1 100%;
+  }
+}
+
+

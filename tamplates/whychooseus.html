@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why Choose Us - Dr. Asif Dental Clinic</title>
+  <link rel="stylesheet" href="C:\Users\ozain\Desktop\DR. asif\static\css\whychooseus.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- 🔹 Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">Dentix</div>
+      <a href="C:\Users\ozain\Desktop\DR. asif\tamplates\home.html" class="back-home">← Back to Home</a>
+    </div>
+  </nav>
+
+  <!-- 🔹 Heading Section -->
+  <section class="why-choose">
+    <h1 data-animate>Why Choose <span>Dr. Asif</span>?</h1>
+    <p data-animate>Your smile is our priority. Here’s what sets us apart from others.</p>
+
+    <div class="features">
+      <div class="feature-card" data-animate>
+        <i class="fas fa-user-md"></i>
+        <h3>Experienced Doctor</h3>
+        <p>Over 15+ years of experience in dental treatments & patient care.</p>
+      </div>
+      <div class="feature-card" data-animate>
+        <i class="fas fa-home"></i>
+        <h3>Home Services</h3>
+        <p>Get treatments in the comfort of your home without extra charges.</p>
+      </div>
+      <div class="feature-card" data-animate>
+        <i class="fas fa-tooth"></i>
+        <h3>Advanced Equipment</h3>
+        <p>We use modern tools for safe, pain-free and quick procedures.</p>
+      </div>
+      <div class="feature-card" data-animate>
+        <i class="fas fa-heart"></i>
+        <h3>Patient First Approach</h3>
+        <p>We treat every patient like family – with empathy, respect, and care.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔹 Footer -->
+  <footer>
+    <p>&copy; 2025 Dentix | Dr. Asif Dental Clinic</p>
+  </footer>
+
+  <!-- 🔹 Scroll Animation Script -->
+  <script>
+    const animatedElements = document.querySelectorAll('[data-animate]');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    animatedElements.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

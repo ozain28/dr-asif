@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Dentix</title>
+  <link rel="stylesheet" href="C:\Users\ozain\Desktop\DR. asif\static\css\contact.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- 🔷 Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">Dentix</div>
+      <a href="C:\Users\ozain\Desktop\DR. asif\tamplates\home.html" class="back-home">← Back to Home</a>
+    </div>
+  </nav>
+
+  <!-- 🟩 Contact Section -->
+  <section class="contact-section">
+    <div class="contact-grid">
+      
+      <!-- 🗺️ Image -->
+      <div class="map-container" data-animate>
+        <img src="C:\Users\ozain\Desktop\DR. asif\static\images\ozain.jpg" alt="Map" />
+      </div>
+
+      <!-- 📋 Contact Form -->
+      <div class="form-container" data-animate>
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+          <input type="text" id="name" placeholder="Your Name" required />
+          <input type="email" id="email" placeholder="Your Email" required />
+          <input type="tel" id="phone" placeholder="Mobile / WhatsApp" required />
+          <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send on WhatsApp</button>
+        </form>
+        <div class="contact-info">
+          <p><i class="fas fa-phone-alt"></i> +92 312 3456789</p>
+          <p><i class="fas fa-envelope"></i> info@dentix.com</p>
+          <p><i class="fas fa-map-marker-alt"></i> Clifton, Karachi, Pakistan</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 🟢 Sticky WhatsApp -->
+  <a href="https://wa.me/923112286384" class="whatsapp-sticky" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- 🔻 Footer -->
+  <footer>
+    <p>&copy; 2025 Dentix | Dr. Asif Dental Clinic</p>
+  </footer>
+
+  <!-- 🔸 Script -->
+  <script>
+    // ✅ Scroll Animation
+    const animated = document.querySelectorAll('[data-animate]');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.1 });
+    animated.forEach(el => observer.observe(el));
+
+    // ✅ WhatsApp Send
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const message = document.getElementById('message').value;
+
+      const url = `https://wa.me/923112286384?text=
+📥 New Message from Dentix Website:%0A
+👤 Name: ${name}%0A
+📧 Email: ${email}%0A
+📱 Phone: ${phone}%0A
+💬 Message: ${message}`;
+
+      window.open(url, '_blank');
+    });
+  </script>
+
+</body>
+</html>
+
+

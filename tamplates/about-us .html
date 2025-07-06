@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Dentix</title>
+  <link rel="stylesheet" href="C:\Users\ozain\Desktop\DR. asif\static\css\about-us.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+ <!-- ✅ Navbar -->
+<nav class="main-navbar">
+  <div class="logo">Dentix</div>
+  <div class="menu-toggle" id="toggleBtn">&#9776;</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="C:\Users\ozain\Desktop\DR. asif\tamplates\home.html">← Back to Home</a></li>
+  </ul>
+</nav>
+
+
+  <!-- ✅ About Section -->
+  <section class="about-section" data-aos="fade-up">
+    <div class="about-text">
+      <h2>About Dr. Asif</h2>
+      <p>
+        Dr. Asif is one of the most trusted dental surgeons in Karachi with over 15 years of experience.
+        He specializes in cosmetic dentistry, dental implants, and family dental care.
+        His patient-first approach and modern techniques have brought healthy smiles to thousands.
+      </p>
+    </div>
+    <div class="about-image">
+      <img src="C:\Users\ozain\Desktop\DR. asif\static\images\ozain.jpg" alt="Dr. Asif">
+    </div>
+  </section>
+
+  <!-- ✅ FAQ Section -->
+  <section class="faq-section" data-aos="fade-up">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-question">What services do you offer?</div>
+      <div class="faq-answer">We offer general dentistry, home dental care, whitening, implants, and more.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Can I get treatment at home?</div>
+      <div class="faq-answer">Yes, we offer home services for scaling, checkups, and whitening.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">What are your timings?</div>
+      <div class="faq-answer">We operate from 10 AM to 10 PM, including weekends.</div>
+    </div>
+
+  </section>
+
+  <!-- ✅ Footer -->
+  <footer>
+    <p>© 2025 <span>Dentix</span> | Designed by Ozain & Noor</p>
+  </footer>
+
+  <!-- ✅ Scripts -->
+  <script>
+    // Navbar Toggle
+    const toggleBtn = document.getElementById('toggleBtn');
+    const navLinks = document.getElementById('navLinks');
+    toggleBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+
+    // FAQ Accordion
+    const faqs = document.querySelectorAll(".faq-item");
+    faqs.forEach(item => {
+      item.addEventListener("click", () => {
+        item.classList.toggle("active");
+      });
+    });
+  </script>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Dental Services</title>
+  <link rel="stylesheet" href="C:\Users\ozain\Desktop\DR. asif\static\css\home.service.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- 🔹 Navbar (Minimal for this page) -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">Dentix</div>
+      <a href="C:\Users\ozain\Desktop\DR. asif\tamplates\home.html" class="back-home">← Back to Home</a>
+    </div>
+  </nav>
+
+  <!-- 🔹 Home Service Section -->
+  <section class="home-service-section">
+    <div class="content">
+      <div class="left" data-animate>
+        <h1>Professional Dental Care <br> <span>At Your Doorstep</span></h1>
+        <p>We bring the clinic to your home! Our experienced professionals ensure top-notch dental treatment without the hassle of travel.</p>
+        <ul>
+          <li><i class="fas fa-tooth"></i> Scaling & Cleaning</li>
+          <li><i class="fas fa-smile"></i> Teeth Whitening</li>
+          <li><i class="fas fa-user-md"></i> General Checkups</li>
+          <li><i class="fas fa-home"></i> On-site Dental Consultations</li>
+        </ul>
+        <a href="" class="book-now">📞 Book Home Visit</a>
+      </div>
+      <div class="right" data-animate>
+        <img src="C:\Users\ozain\Desktop\DR. asif\static\images\shazaib.jpg" alt="Home Dental" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔹 Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Dentix | Dr. Asif Dental Clinic</p>
+    </div>
+  </footer>
+
+  <!-- 🔹 Scroll Animation Script -->
+  <script>
+    const elements = document.querySelectorAll('[data-animate]');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    elements.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
